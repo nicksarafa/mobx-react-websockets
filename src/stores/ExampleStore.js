@@ -3,7 +3,7 @@ import { extendObservable } from 'mobx'
 class ExampleStore {
   constructor() {
     extendObservable(this, {
-      isThisExampleWorking: true,
+      isThisExampleWorking: false,
     })
   }
 

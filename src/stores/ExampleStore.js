@@ -1,5 +1,7 @@
-import { extendObservable } from 'mobx'
+import { observable } from 'mobx'
 
-class ExampleStore {}
+class ExampleStore {
+  @observable isThisWorking = false
+}
 
 export { ExampleStore }

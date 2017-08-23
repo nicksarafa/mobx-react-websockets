@@ -1,8 +1,16 @@
 import React, { Component } from 'react';
+import { inject, observer } from 'mobx-react'
 import logo from './logo.svg';
 import './App.css';
 
+@inject('exampleStore')
+@observer
 class App extends Component {
+  componentDidMount() {
+    console.log(this.props.exampleStore.isThisWorking)
+    this.props.exampleStore.isThisWorking = !this.props.exampleStore.isThisWorking
+    console.log(this.props.exampleStore.isThisWorking)
+  }
   render() {
     return (
       <div className="App">
